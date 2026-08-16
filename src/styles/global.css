@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg:       #0a0a0f;
+  --color-card:     #111118;
+  --color-elevated: #16161f;
+  --color-accent:   #6c63ff;
+  --color-accent-2: #a78bfa;
+  --color-green:    #22d3a5;
+  --color-txt:      #f0f0f8;
+  --color-txt-2:    #9898b2;
+  --color-muted:    #5a5a72;
+
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ── Base ───────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.12) transparent;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-txt);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(108,99,255,0.2);
+  color: var(--color-accent-2);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 99px;
+}
+
+/* ── Utility: gradient text ─────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
